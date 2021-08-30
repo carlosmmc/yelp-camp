@@ -1,0 +1,24 @@
+{
+  "name": "yelp-camp",
+  "version": "1.0.0",
+  "description": "Capstone project of \"The Web Developer Bootcamp 2021\" by Colt Steele. While I wrote all of the code in this repository, it was from following along with the class material.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/carlosmmc/yelp-camp.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/carlosmmc/yelp-camp/issues"
+  },
+  "homepage": "https://github.com/carlosmmc/yelp-camp#readme",
+  "dependencies": {
+    "ejs": "^3.1.6",
+    "express": "^4.17.1",
+    "mongoose": "^6.0.2"
+  }
+}
