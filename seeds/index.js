@@ -26,9 +26,26 @@ const seedDB = async () => {
             author: '6137e113cd2e47332f0c1113',
             location: `${cities[random1000].city}, ${cities[random1000].state}`,
             title: `${sample(descriptors)} ${sample(places)}`,
-            image: 'https://source.unsplash.com/random',
             description: 'yeet bois in the woods we love it when we can be with the bugs',
-            price
+            price,
+            images: [
+                {
+                    url: 'https://res.cloudinary.com/dokxhbkrl/image/upload/v1631119855/YelpCamp/abfosjtwslck6cjbbiir.jpg',
+                    filename: 'YelpCamp/abfosjtwslck6cjbbiir',
+                },
+                {
+                    url: 'https://res.cloudinary.com/dokxhbkrl/image/upload/v1631119855/YelpCamp/khs5q77qivqe4aji5nlo.jpg',
+                    filename: 'YelpCamp/khs5q77qivqe4aji5nlo',
+                },
+                {
+                    url: 'https://res.cloudinary.com/dokxhbkrl/image/upload/v1631119855/YelpCamp/uani7xjvr6kpcykrl1oc.jpg',
+                    filename: 'YelpCamp/uani7xjvr6kpcykrl1oc',
+                },
+                {
+                    url: 'https://res.cloudinary.com/dokxhbkrl/image/upload/v1631119855/YelpCamp/ibgmjdtr1neemuv1yu8z.jpg',
+                    filename: 'YelpCamp/ibgmjdtr1neemuv1yu8z',
+                }
+            ]
         })
         await camp.save();
     }
