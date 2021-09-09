@@ -1,9 +1,9 @@
-const mongoose = require('mongoose');
-const Schema = mongoose.Schema;
-const Review = require('./review')
+const mongoose=require('mongoose');
+const Schema=mongoose.Schema;
+const Review=require('./review')
 
 
-const ImageSchema = new Schema({
+const ImageSchema=new Schema({
     url: String,
     filename: String
 })
@@ -12,7 +12,9 @@ ImageSchema.virtual('thumbnail').get(function () {
     return this.url.replace('/upload', '/upload/w_200')
 })
 
-const CampgroundSchema = new Schema({
+const opts={ toJSON: { virtuals: true } }
+
+const CampgroundSchema=new Schema({
     title: String,
     images: [ImageSchema],
     geometry: {
@@ -39,6 +41,10 @@ const CampgroundSchema = new Schema({
             ref: 'Review'
         }
     ]
+}, opts)
+
+CampgroundSchema.virtual('properties.popUpMarkup').get(function () {
+    return `<strong><a href="/campgrounds/${this._id}">${this.title}</a></strong>`
 })
 
 CampgroundSchema.post('findOneAndDelete', async function (doc) {
@@ -47,4 +53,4 @@ CampgroundSchema.post('findOneAndDelete', async function (doc) {
     }
 })
 
-module.exports = mongoose.model('Campground', CampgroundSchema)
+module.exports=mongoose.model('Campground', CampgroundSchema)
