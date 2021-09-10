@@ -21,7 +21,7 @@ const seedDB=async () => {
 
     for (let i=0; i<500; i++) {
         const random1000=Math.floor(Math.random()*1000) // there are 1000 cities in seed file
-        const price=Math.floor(Math.random()*1000)
+        const price=Math.floor(Math.random()*50)+10
         const camp=new Campground({
             author: '6137e113cd2e47332f0c1113',
             location: `${cities[random1000].city}, ${cities[random1000].state}`,
@@ -36,20 +36,20 @@ const seedDB=async () => {
             },
             images: [
                 {
-                    url: 'https://res.cloudinary.com/dokxhbkrl/image/upload/v1631119855/YelpCamp/abfosjtwslck6cjbbiir.jpg',
-                    filename: 'YelpCamp/abfosjtwslck6cjbbiir',
+                    url: 'https://res.cloudinary.com/dokxhbkrl/image/upload/v1631301984/YelpCamp/dominik-jirovsky-re2LZOB2XvY-unsplash_kg8v0l.jpg',
+                    filename: 'YelpCamp/dominik-jirovsky-re2LZOB2XvY-unsplash_kg8v0l',
                 },
                 {
-                    url: 'https://res.cloudinary.com/dokxhbkrl/image/upload/v1631119855/YelpCamp/khs5q77qivqe4aji5nlo.jpg',
-                    filename: 'YelpCamp/khs5q77qivqe4aji5nlo',
+                    url: 'https://res.cloudinary.com/dokxhbkrl/image/upload/v1631301984/YelpCamp/scott-goodwill-y8Ngwq34_Ak-unsplash_s9vdai.jpg',
+                    filename: 'YelpCamp/scott-goodwill-y8Ngwq34_Ak-unsplash_s9vdai',
                 },
                 {
-                    url: 'https://res.cloudinary.com/dokxhbkrl/image/upload/v1631119855/YelpCamp/uani7xjvr6kpcykrl1oc.jpg',
-                    filename: 'YelpCamp/uani7xjvr6kpcykrl1oc',
+                    url: 'https://res.cloudinary.com/dokxhbkrl/image/upload/v1631301984/YelpCamp/tegan-mierle-fDostElVhN8-unsplash_djlbn9.jpg',
+                    filename: 'YelpCamp/tegan-mierle-fDostElVhN8-unsplash_djlbn9',
                 },
                 {
-                    url: 'https://res.cloudinary.com/dokxhbkrl/image/upload/v1631119855/YelpCamp/ibgmjdtr1neemuv1yu8z.jpg',
-                    filename: 'YelpCamp/ibgmjdtr1neemuv1yu8z',
+                    url: 'https://res.cloudinary.com/dokxhbkrl/image/upload/v1631301984/YelpCamp/pars-sahin-V7uP-XzqX18-unsplash_ciz28y.jpg',
+                    filename: 'YelpCamp/pars-sahin-V7uP-XzqX18-unsplash_ciz28y',
                 }
             ]
         })

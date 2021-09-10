@@ -1,19 +1,30 @@
 <% layout('layouts/boilerplate') %>
-    <div id="map" style="width: 100%; height: 500px">
+    <div class='mb-3'>
+        <h1 style="display: inline;" class="display-4">All Campgrounds</h1>
     </div>
-    <h1>All Campgrounds</h1>
-    <div>
-        <a href="/campgrounds/new">Add a campground</a>
+    <div id="cluster-map"></div>
+
+    <div class="col text-center my-3">
+        <a class='btn btn-success margin-left-4' href="/campgrounds/new">
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-check-circle" viewBox="0 0 16 16">
+                <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z" />
+                <path
+                    d="M10.97 4.97a.235.235 0 0 0-.02.022L7.477 9.417 5.384 7.323a.75.75 0 0 0-1.06 1.06L6.97 11.03a.75.75 0 0 0 1.079-.02l3.992-4.99a.75.75 0 0 0-1.071-1.05z" />
+            </svg>
+            Add Camp!
+        </a>
     </div>
+
+
     <% for (let campground of campgrounds) { %>
-        <div class="card mb-3">
+        <div class="card mb-4">
             <div class="row">
                 <div class="col-md-4">
                     <% if(campground.images.length){ %>
                         <img class="img-fluid" alt="" src="<%= campground.images[0].url %>">
                         <% } else {%>
                             <img class="img-fluid" alt=""
-                                src="https://res.cloudinary.com/dokxhbkrl/image/upload/v1631198210/YelpCamp/kdk3xgazv2ryot0p3kl1.jpg>">
+                                src="https://res.cloudinary.com/dokxhbkrl/image/upload/v1631198210/YelpCamp/kdk3xgazv2ryot0p3kl1.jpg">
                             <% }%>
                 </div>
                 <div class="col-md-8">

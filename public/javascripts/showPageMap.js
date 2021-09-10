@@ -1,13 +1,15 @@
-mapboxgl.accessToken = mapToken
+mapboxgl.accessToken=mapToken
 
-let map = new mapboxgl.Map({
+let map=new mapboxgl.Map({
     container: 'map',
     style: 'mapbox://styles/mapbox/light-v10',
     center: campground.geometry.coordinates,
     zoom: 8
 })
 
-var marker = new mapboxgl.Marker()
+map.addControl(new mapboxgl.NavigationControl())
+
+var marker=new mapboxgl.Marker()
     .setLngLat(campground.geometry.coordinates)
     .setPopup(
         new mapboxgl.Popup({ offset: 25 })
