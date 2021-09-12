@@ -20,9 +20,13 @@ const helmet=require('helmet')
 
 const userRoutes=require('./routes/users')
 const campgroundRoutes=require('./routes/campgrounds')
-const reviewRoutes=require('./routes/reviews')
+const reviewRoutes=require('./routes/reviews');
+const MongoStore=require('connect-mongo');
+const MongoDBStore=require("connect-mongo")(session);
 
-mongoose.connect('mongodb://localhost:27017/yelp-camp', {
+const dbUrl=process.env.DB_URL||'mongodb://localhost:27017/yelp-camp'
+
+mongoose.connect(dbUrl, {
     useNewUrlParser: true,
     useUnifiedTopology: true
 })
@@ -44,9 +48,22 @@ app.use(methodOverride('_method'))
 app.use(express.static(path.join(__dirname, 'public')))
 app.use(mongoSanitize())
 
+const secret=process.env.SECRET||'placeholdersecret'
+
+const store=new MongoDBStore({
+    url: dbUrl,
+    secret: secret,
+    touchAfter: 24*60*60
+})
+
+store.on('error', function (e) {
+    console.log('session store error', e)
+})
+
 const sessionConfig={
+    store,
     name: 'specificSession',
-    secret: 'placeholderSecret',
+    secret,
     resave: false,
     saveUninitialized: true,
     cookie: {
@@ -68,6 +85,7 @@ const scriptSrcUrls=[
     "https://cdnjs.cloudflare.com/",
     "https://cdn.jsdelivr.net",
 ];
+
 const styleSrcUrls=[
     "https://kit-free.fontawesome.com/",
     "https://stackpath.bootstrapcdn.com/",
@@ -76,13 +94,16 @@ const styleSrcUrls=[
     "https://fonts.googleapis.com/",
     "https://use.fontawesome.com/",
 ];
+
 const connectSrcUrls=[
     "https://api.mapbox.com/",
     "https://a.tiles.mapbox.com/",
     "https://b.tiles.mapbox.com/",
     "https://events.mapbox.com/",
 ];
+
 const fontSrcUrls=[];
+
 app.use(
     helmet.contentSecurityPolicy({
         directives: {
