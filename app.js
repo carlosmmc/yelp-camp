@@ -20,9 +20,9 @@ const helmet=require('helmet')
 
 const userRoutes=require('./routes/users')
 const campgroundRoutes=require('./routes/campgrounds')
-const reviewRoutes=require('./routes/reviews');
-const MongoStore=require('connect-mongo');
-const MongoDBStore=require("connect-mongo")(session);
+const reviewRoutes=require('./routes/reviews')
+const MongoStore=require('connect-mongo')
+const MongoDBStore=require("connect-mongo")(session)
 
 const dbUrl=process.env.DB_URL||'mongodb://localhost:27017/yelp-camp'
 
@@ -52,25 +52,24 @@ const secret=process.env.SECRET||'placeholdersecret'
 
 const store=new MongoDBStore({
     url: dbUrl,
-    secret: secret,
+    secret,
     touchAfter: 24*60*60
 })
 
-store.on('error', function (e) {
-    console.log('session store error', e)
+store.on("error", function (e) {
+    console.log("SESSION STORE ERROR", e)
 })
 
 const sessionConfig={
     store,
-    name: 'specificSession',
+    name: 'session',
     secret,
     resave: false,
     saveUninitialized: true,
     cookie: {
         httpOnly: true,
-        secure: secure,
-        expires: Date.now()+1000*60*60*24*7, // setting up to be a week from now
-        maxAge: 1000*60*60*24*7,
+        expires: Date.now()+1000*60*60*24*7,
+        maxAge: 1000*60*60*24*7
     }
 }
 
