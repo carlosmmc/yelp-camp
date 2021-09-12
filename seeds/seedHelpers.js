@@ -1,4 +1,4 @@
-module.exports.descriptors = [
+module.exports.descriptors=[
     'Forest',
     'Ancient',
     'Petrified',
@@ -19,7 +19,7 @@ module.exports.descriptors = [
     'Diamond'
 ]
 
-module.exports.places = [
+module.exports.places=[
     'Flats',
     'Village',
     'Canyon',
@@ -41,4 +41,44 @@ module.exports.places = [
     'Hunting Camp',
     'Cliffs',
     'Hollow'
+]
+
+module.exports.testUsers=[
+    '613e58a39a7694d3957db5c4',
+    '613e58b59a7694d3957dc56b',
+    '613e58c49a7694d3957dd512'
+]
+
+module.exports.photos=[
+    ['https://res.cloudinary.com/dokxhbkrl/image/upload/v1631476705/YelpCamp/dino-reichmuth-5Rhl-kSRydQ-unsplash_jbveev.jpg', 'dino-reichmuth-5Rhl-kSRydQ-unsplash_jbveev'],
+    ['https://res.cloudinary.com/dokxhbkrl/image/upload/v1631476705/YelpCamp/kevin-ianeselli-ebnlHkqfUHY-unsplash_mx8z64.jpg', 'kevin-ianeselli-ebnlHkqfUHY-unsplash_mx8z64'],
+    ['https://res.cloudinary.com/dokxhbkrl/image/upload/v1631476705/YelpCamp/andreas-ronningen-i9FLJwYhVQs-unsplash_fa1kat.jpg', 'andreas-ronningen-i9FLJwYhVQs-unsplash_fa1kat'],
+    ['https://res.cloudinary.com/dokxhbkrl/image/upload/v1631476705/YelpCamp/patrick-hendry-eDgUyGu93Yw-unsplash_cl2pdo.jpg', 'patrick-hendry-eDgUyGu93Yw-unsplash_cl2pdo'],
+    ['https://res.cloudinary.com/dokxhbkrl/image/upload/v1631476705/YelpCamp/the-digital-marketing-collaboration-EcnVW_oD5kU-unsplash_q2zsdh.jpg', 'the-digital-marketing-collaboration-EcnVW_oD5kU-unsplash_q2zsdh'],
+    ['https://res.cloudinary.com/dokxhbkrl/image/upload/v1631476705/YelpCamp/grant-ritchie-c1XZjkM_-q8-unsplash_wxzyix.jpg', 'grant-ritchie-c1XZjkM_-q8-unsplash_wxzyix'],
+    ['https://res.cloudinary.com/dokxhbkrl/image/upload/v1631476705/YelpCamp/everett-mcintire-BPCsppbNRMI-unsplash_frlnqf.jpg', 'everett-mcintire-BPCsppbNRMI-unsplash_frlnqf'],
+    ['https://res.cloudinary.com/dokxhbkrl/image/upload/v1631476705/YelpCamp/todd-trapani-5LHzBpiTuzQ-unsplash_lpo9k4.jpg', 'todd-trapani-5LHzBpiTuzQ-unsplash_lpo9k4'],
+    ['https://res.cloudinary.com/dokxhbkrl/image/upload/v1631476705/YelpCamp/christopher-jolly-gcCcIy6Fc_M-unsplash_p9g4cw.jpg', 'christopher-jolly-gcCcIy6Fc_M-unsplash_p9g4cw'],
+    ['https://res.cloudinary.com/dokxhbkrl/image/upload/v1631476705/YelpCamp/matt-whitacre-F4GGnyJ8aiI-unsplash_ulmtzn.jpg', 'matt-whitacre-F4GGnyJ8aiI-unsplash_ulmtzn'],
+    ['https://res.cloudinary.com/dokxhbkrl/image/upload/v1631476704/YelpCamp/lance-anderson-JKmjElTIG5I-unsplash_aufob1.jpg', 'lance-anderson-JKmjElTIG5I-unsplash_aufob1'],
+    ['https://res.cloudinary.com/dokxhbkrl/image/upload/v1631476704/YelpCamp/zach-betten-K9olx8OF36A-unsplash_ozcagu.jpg', 'zach-betten-K9olx8OF36A-unsplash_ozcagu'],
+    ['https://res.cloudinary.com/dokxhbkrl/image/upload/v1631476704/YelpCamp/leon-contreras-YndHL7gQIJE-unsplash_gkfm4q.jpg', 'leon-contreras-YndHL7gQIJE-unsplash_gkfm4q'],
+    ['https://res.cloudinary.com/dokxhbkrl/image/upload/v1631476704/YelpCamp/sendi-gibran-kMFpmWnI05o-unsplash_x2hbfj.jpg', 'sendi-gibran-kMFpmWnI05o-unsplash_x2hbfj'],
+    ['https://res.cloudinary.com/dokxhbkrl/image/upload/v1631476704/YelpCamp/peter-thomas-ATdSdo72wR8-unsplash_ayeika.jpg', 'peter-thomas-ATdSdo72wR8-unsplash_ayeika'],
+    ['https://res.cloudinary.com/dokxhbkrl/image/upload/v1631476704/YelpCamp/toa-heftiba-x9I-6yoXrXE-unsplash_pspidh.jpg', 'toa-heftiba-x9I-6yoXrXE-unsplash_pspidh'],
+    ['https://res.cloudinary.com/dokxhbkrl/image/upload/v1631476704/YelpCamp/woody-kelly-8qLxn28Clko-unsplash_aiggju.jpg', 'woody-kelly-8qLxn28Clko-unsplash_aiggju'],
+    ['https://res.cloudinary.com/dokxhbkrl/image/upload/v1631476704/YelpCamp/lesly-derksen-F4fH5dAfZnE-unsplash_tomwbw.jpg', 'lesly-derksen-F4fH5dAfZnE-unsplash_tomwbw'],
+    ['https://res.cloudinary.com/dokxhbkrl/image/upload/v1631476704/YelpCamp/andrew-gloor-I1RZSDvvStY-unsplash_w1kqc9.jpg', 'andrew-gloor-I1RZSDvvStY-unsplash_w1kqc9'],
+    ['https://res.cloudinary.com/dokxhbkrl/image/upload/v1631476704/YelpCamp/lucija-ros-MlCaPR4UTSw-unsplash_xhdjvq.jpg', 'lucija-ros-MlCaPR4UTSw-unsplash_xhdjvq'],
+    ['https://res.cloudinary.com/dokxhbkrl/image/upload/v1631476703/YelpCamp/guillaume-gouin-68YXvKCobKI-unsplash_ld62u1.jpg', 'guillaume-gouin-68YXvKCobKI-unsplash_ld62u1'],
+    ['https://res.cloudinary.com/dokxhbkrl/image/upload/v1631476703/YelpCamp/tom-tvr-asNEf17zIiI-unsplash_bnr1bp.jpg', 'tom-tvr-asNEf17zIiI-unsplash_bnr1bp'],
+    ['https://res.cloudinary.com/dokxhbkrl/image/upload/v1631476703/YelpCamp/alfred-boivin-XoM0eYSXWMs-unsplash_uqcqyb.jpg', 'alfred-boivin-XoM0eYSXWMs-unsplash_uqcqyb'],
+    ['https://res.cloudinary.com/dokxhbkrl/image/upload/v1631476703/YelpCamp/vlad-shalaginov-mXvCGhfgkMU-unsplash_kuxreq.jpg', 'vlad-shalaginov-mXvCGhfgkMU-unsplash_kuxreq'],
+    ['https://res.cloudinary.com/dokxhbkrl/image/upload/v1631476703/YelpCamp/bangkokrush-65tHOX2AwCM-unsplash_wx5ecw.jpg', 'bangkokrush-65tHOX2AwCM-unsplash_wx5ecw'],
+    ['https://res.cloudinary.com/dokxhbkrl/image/upload/v1631476703/YelpCamp/sreehari-devadas-G5n5AC6Cc0Y-unsplash_ua0glv.jpg', 'sreehari-devadas-G5n5AC6Cc0Y-unsplash_ua0glv'],
+    ['https://res.cloudinary.com/dokxhbkrl/image/upload/v1631476703/YelpCamp/toby-elliott-mBXXP7ns6lM-unsplash_x5unvb.jpg', 'toby-elliott-mBXXP7ns6lM-unsplash_x5unvb'],
+    ['https://res.cloudinary.com/dokxhbkrl/image/upload/v1631476703/YelpCamp/cindy-chen-EP4VrAn-WaY-unsplash_fmemyu.jpg', 'cindy-chen-EP4VrAn-WaY-unsplash_fmemyu'],
+    ['https://res.cloudinary.com/dokxhbkrl/image/upload/v1631476703/YelpCamp/chris-schog-EnCaUE4QNOw-unsplash_srfpic.jpg', 'chris-schog-EnCaUE4QNOw-unsplash_srfpic'],
+    ['https://res.cloudinary.com/dokxhbkrl/image/upload/v1631476703/YelpCamp/chris-holder-uY2UIyO5o5c-unsplash_ube5fu.jpg', 'chris-holder-uY2UIyO5o5c-unsplash_ube5fu'],
+    ['https://res.cloudinary.com/dokxhbkrl/image/upload/v1631476703/YelpCamp/mattias-helge-CAk3Rl75CD8-unsplash_etcjla.jpg', 'mattias-helge-CAk3Rl75CD8-unsplash_etcjla'],
 ]

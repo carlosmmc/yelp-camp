@@ -1,6 +1,6 @@
 const mongoose=require('mongoose');
 const cities=require('./cities')
-const { places, descriptors }=require('./seedHelpers')
+const { places, descriptors, testUsers, photos }=require('./seedHelpers')
 const Campground=require('../models/campground');
 require('dotenv').config()
 
@@ -23,11 +23,12 @@ const seedDB=async () => {
     for (let i=0; i<500; i++) {
         const random1000=Math.floor(Math.random()*1000) // there are 1000 cities in seed file
         const price=Math.floor(Math.random()*50)+10
+        const campPhoto=Array(3).fill().map(() => Math.round(Math.random()*(photos.length-1)))
         const camp=new Campground({
-            author: '613e3adcef40b6c8eaba40d6',
+            author: testUsers[Math.floor(Math.random()*testUsers.length)],
             location: `${cities[random1000].city}, ${cities[random1000].state}`,
             title: `${sample(descriptors)} ${sample(places)}`,
-            description: 'yeet bois in the woods we love it when we can be with the bugs',
+            description: 'Lorem ipsum dolor sit, amet consectetur adipisicing elit. Minima, sit blanditiis? Alias porro nihil natus illo esse, iure libero error tenetur reprehenderit odio dolores ullam pariatur magni numquam nam amet?',
             price,
             geometry: {
                 type: "Point",
@@ -37,20 +38,16 @@ const seedDB=async () => {
             },
             images: [
                 {
-                    url: 'https://res.cloudinary.com/dokxhbkrl/image/upload/v1631301984/YelpCamp/dominik-jirovsky-re2LZOB2XvY-unsplash_kg8v0l.jpg',
-                    filename: 'YelpCamp/dominik-jirovsky-re2LZOB2XvY-unsplash_kg8v0l',
+                    url: photos[campPhoto[0]][0],
+                    filename: photos[campPhoto[0]][1],
                 },
                 {
-                    url: 'https://res.cloudinary.com/dokxhbkrl/image/upload/v1631301984/YelpCamp/scott-goodwill-y8Ngwq34_Ak-unsplash_s9vdai.jpg',
-                    filename: 'YelpCamp/scott-goodwill-y8Ngwq34_Ak-unsplash_s9vdai',
+                    url: photos[campPhoto[1]][0],
+                    filename: photos[campPhoto[1]][1],
                 },
                 {
-                    url: 'https://res.cloudinary.com/dokxhbkrl/image/upload/v1631301984/YelpCamp/tegan-mierle-fDostElVhN8-unsplash_djlbn9.jpg',
-                    filename: 'YelpCamp/tegan-mierle-fDostElVhN8-unsplash_djlbn9',
-                },
-                {
-                    url: 'https://res.cloudinary.com/dokxhbkrl/image/upload/v1631301984/YelpCamp/pars-sahin-V7uP-XzqX18-unsplash_ciz28y.jpg',
-                    filename: 'YelpCamp/pars-sahin-V7uP-XzqX18-unsplash_ciz28y',
+                    url: photos[campPhoto[2]][0],
+                    filename: photos[campPhoto[2]][1],
                 }
             ]
         })
