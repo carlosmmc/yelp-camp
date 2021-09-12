@@ -2,8 +2,9 @@ const mongoose=require('mongoose');
 const cities=require('./cities')
 const { places, descriptors }=require('./seedHelpers')
 const Campground=require('../models/campground');
+require('dotenv').config()
 
-mongoose.connect('mongodb://localhost:27017/yelp-camp', {
+mongoose.connect(process.env.DB_URL, {
     useNewUrlParser: true,
     useUnifiedTopology: true
 });
@@ -23,7 +24,7 @@ const seedDB=async () => {
         const random1000=Math.floor(Math.random()*1000) // there are 1000 cities in seed file
         const price=Math.floor(Math.random()*50)+10
         const camp=new Campground({
-            author: '6137e113cd2e47332f0c1113',
+            author: '613e3adcef40b6c8eaba40d6',
             location: `${cities[random1000].city}, ${cities[random1000].state}`,
             title: `${sample(descriptors)} ${sample(places)}`,
             description: 'yeet bois in the woods we love it when we can be with the bugs',
