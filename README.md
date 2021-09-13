@@ -2,7 +2,7 @@
 
 ## Description
 
-<kbd><img src="banner.gif"/></kbd>
+<kbd><img src="bannerMedia.gif"/></kbd>
 
 Yelp style web app that allows users to view campgrounds across the country. Implements restful API's with full CRUD functionality. Also incorporates user authorization/authentication, cloud based image management, dynamic mapping & standard security best practices.
 
